@@ -9,6 +9,10 @@ header {
   overflow: hidden;
   color: rgba(44, 62, 80, 0.95);
 }
+.tagline {
+  color: rgba(44, 62, 80, 0.95);
+  font-weight: bold;
+}
 
 #bgVideo {
   position: absolute;
@@ -137,3 +141,4 @@ header {
   50% { transform: scale(1.1); color: #1abc9c; text-shadow: 0 0 20px #1abc9c; }
   100% { transform: scale(1); color: #16a085; text-shadow: 0 0 5px #16a085; }
 }
+
