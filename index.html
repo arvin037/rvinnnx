@@ -212,12 +212,13 @@
 
 <!-- Modal -->
 <div id="modal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
+   <span class="close" onclick="closeModal()">&times;</span>
   <img class="modal-content" id="modalImage">
   <div id="caption"></div>
 </div>
 
-  <script src="script.js"></script> <!-- JS file -->
+  <!-- JS file -->
+  <script src="script.js"></script>
 
   <!-- Skills Section -->
 <section id="skills" class="skills hidden">
@@ -254,6 +255,22 @@
     <p>GitHub: <a href="#" target="_blank">github.com/arvin037</a></p>
   </section>
 
+<div class="qrcode">
+  <img src="gcash.jpg" alt="QR Code" id="qrCode">
+</div>
+
+<!-- Modal -->
+<div id="qrModal" class="modal">
+  <div class="modal-content">
+     <span class="close" onclick="closeModal()">&times;</span>
+    <img src="qrcode.jpg" alt="My Work" class="modal-img">
+    <p class="qr-message">Send ka dito pang Shopee ko 🤪</p>
+  </div>
+</div>
+
+<!-- JS file -->
+  <script src="qrcode.js"></script>
+
   <!-- Footer -->
   <footer>
     <p>© 2025 Arvin Dave Calio. All Rights Reserved.</p>
@@ -274,4 +291,3 @@
   </script>
 </body>
 </html>
-
