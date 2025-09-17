@@ -47,7 +47,7 @@ nav {
 
 /* Push hamburger to right */
 .hamburger {
-  margin-left: auto; /* pushes it to the far right */
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -225,85 +225,4 @@ header {
   0% { transform: scale(1); color: #16a085; text-shadow: 0 0 5px #16a085; }
   50% { transform: scale(1.1); color: #1abc9c; text-shadow: 0 0 20px #1abc9c; }
   100% { transform: scale(1); color: #16a085; text-shadow: 0 0 5px #16a085; }
-}  font-size: 1.2rem;
 }
-.close {
-  position: absolute;
-  top: 40px;
-  right: 60px;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-.close:hover {
-  color: #1abc9c;
-}
-
-/* ==== Skills Section ==== */
-.skills-container {
-  max-width: 700px;
-  margin: auto;
-}
-.skill {
-  margin-bottom: 1.5rem;
-}
-.skill span {
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-}
-.bar {
-  width: 100%;
-  background: #ecf0f1;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 14px;
-}
-.progress {
-  height: 100%;
-  border-radius: 20px;
-}
-.progress.html { width: 90%; background: #e67e22; }
-.progress.css { width: 90%; background: #2980b9; }
-.progress.js { width: 90%; background: #f1c40f; }
-.progress.react { width: 50%; background: #16a085; }
-.progress.design { width: 60%; background: #8e44ad; }
-
-/* ==== QR Code Fixed Corner ==== */
-.qrcode {
-  position: fixed;
-  top: 89%;
-  right: 2%;
-  transform: translateY(-50%);
-  z-index: 1500;
-}
-.qrcode img {
-  width: 95px;
-  height: 48px;
-  border-radius: 30px;
-  box-shadow: 0 4px 10px rgba(136, 136, 136, 0.3);
-  transition: transform 0.3s;
-}
-.qrcode img:hover {
-  transform: scale(1.1);
-}
-
-/* Center the message inside modal */
-.qr-message {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #16a085;
-  animation: pulse 1.5s infinite;
-}
-
-/* Glowing / lively effect */
-@keyframes pulse {
-  0% { transform: scale(1); color: #16a085; text-shadow: 0 0 5px #16a085; }
-  50% { transform: scale(1.1); color: #1abc9c; text-shadow: 0 0 20px #1abc9c; }
-  100% { transform: scale(1); color: #16a085; text-shadow: 0 0 5px #16a085; }
-}
-
-
