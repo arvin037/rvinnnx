@@ -176,6 +176,293 @@
   <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- Dropdown Menu -->
+  <div class="dropdown" id="dropdownMenu">
+    <a href="#">Help</a>
+  </div>
+</nav>
+
+  <!-- Hero Section with Video Background -->
+<header>
+  <video autoplay muted loop id="bgVideo">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <img src="your-photo.jpg" alt="My Photo">
+    <h1>Arvin Dave Calio</h1>
+    <p class="tagline">IT Student | Creator</p>
+  </div>
+</header>
+
+<!-- Line Divider -->
+<hr class="section-divider">
+
+  <!-- About Section -->
+  <section id="about" class="about hidden">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm <b>Arvin Dave Calio</b> and i dedicated and adaptable individual with strong IT knowledge and practical skills in computer hardware, software, and office applications. Known for being resourceful, quick to learn, and able to work independently or as part of a team. Brings reliability, attention to detail, and a positive attitude toward challenges. Eager to grow both personally and professionally while consistently delivering quality work and supporting others effectively.
+    </p>
+  </section>
+
+<section id="projects" class="projects hidden">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+    <div class="card" onclick="openModal('work1.jpg', 'Upcoming')">
+      <h3>Upcoming</h3>
+      <p>I'm working on it...</p>
+    </div>
+    <div class="card" onclick="openModal('certificate1.jpg', 'Upcoming')">
+      <h3>Upcoming</h3>
+      <p>I'm working on it...</p>
+    </div>
+    <div class="card" onclick="openModal('project3.jpg', 'Upcoming')">
+      <h3>Upcoming</h3>
+      <p>I'm working on it...</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+   <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div id="caption"></div>
+</div>
+
+  <!-- JS file -->
+  <script src="script.js"></script>
+
+  <!-- Skills Section -->
+<section id="skills" class="skills hidden">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    <div class="skill">
+      <span>IT Support & Helpdesk Operations</span>
+      <div class="bar"><div class="progress html"></div></div>
+    </div>
+    <div class="skill">
+      <span>Troubleshooting Hardware & Software Issues</span>
+      <div class="bar"><div class="progress css"></div></div>
+    </div>
+    <div class="skill">
+      <span>System Installation and Configuration</span>
+      <div class="bar"><div class="progress js"></div></div>
+    </div>
+    <div class="skill">
+      <span>Basic Graphic Design Photoshop, Canva, etc.</span>
+      <div class="bar"><div class="progress react"></div></div>
+    </div>
+    <div class="skill">
+      <span>Networking</span>
+      <div class="bar"><div class="progress design"></div></div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact hidden">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:youremail@example.com">arvindavecalio37@gmail.com</a></p>
+    <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/rvindave</a></p>
+    <p>GitHub: <a href="#" target="_blank">github.com/arvin037</a></p>
+  </section>
+
+<div class="qrcode">
+  <img src="gcash.jpg" alt="QR Code" id="qrCode">
+</div>
+
+<!-- Modal -->
+<div id="qrModal" class="modal">
+  <div class="modal-content">
+     <span class="close" onclick="closeModal()">&times;</span>
+    <img src="qrcode.jpg" alt="My Work" class="modal-img">
+    <p class="qr-message">Send ka dito pang Shopee ko 🤪</p>
+  </div>
+</div>
+
+<!-- JS file -->
+  <script src="qrcode.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Arvin Dave Calio. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const hiddenElements = document.querySelectorAll(".hidden");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    hiddenElements.forEach(el => observer.observe(el));
+  </script>
+  
+<script>
+  function toggleMenu() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+  }
+
+  // Close dropdown if clicked outside
+  window.onclick = function(event) {
+    if (!event.target.closest(".hamburger")) {
+      document.getElementById("dropdownMenu").classList.remove("show");
+    }
+  }
+</script>
+</body>
+</html>      width: 100%;
+      background: rgba(44, 62, 80, 0.95);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+    nav a {
+      color: #ecf0f1;
+      font-weight: bold;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #1abc9c;
+      transition: 0.3s;
+    }
+    nav a:hover::after {
+      width: 75%;
+    }
+
+    /* ==== Hero Section ==== */
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      color: white;
+    }
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid rgba(44, 62, 80, 0.95);
+      margin-bottom: 1.5rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      object-fit: cover;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+
+    /* ==== Section Styling ==== */
+    section {
+      padding: 4rem 10%;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #16a085;
+    }
+
+    /* ==== About ==== */
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    /* ==== Projects ==== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+
+    /* ==== Contact ==== */
+    .contact p {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .contact a {
+      color: #16a085;
+      font-weight: bold;
+    }
+
+    /* ==== Footer ==== */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #2c3e50;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    /* ==== Scroll Animation ==== */
+    .hidden {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-in-out;
+    }
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      section { padding: 3rem 5%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
 </nav>
 
   <!-- Hero Section with Video Background -->
@@ -300,5 +587,6 @@
   </script>
 </body>
 </html>
+
 
 
